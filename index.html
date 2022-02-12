@@ -17,31 +17,31 @@
             <article class="proceeding">
                 <h2>Was soll berechnet werden?</h2>
                 <input type="radio" name="calcProceedings" id="calcBrutto" checked
-                    onchange="changeHeadlines('Nettobetrag (Preis ohne Mehrwertsteuer)', 'Bruttobetrag (Endpreis)'), clearInAndOut()">
+                    onchange="changeHeadlines('Nettobetrag (Preis ohne Mehrwertsteuer)', 'Bruttobetrag (Endpreis)'), setDefaultValues()">
                 Mehrwertsteuer aufschlagen (Netto zu Brutto)<br>
 
 
                 <input type="radio" name="calcProceedings" id="calcNetto"
-                    onchange="changeHeadlines('Bruttobetrag (Preis inklusive Mehrwertsteuer)', 'Nettobetrag') , clearInAndOut()">
+                    onchange="changeHeadlines('Bruttobetrag (Preis inklusive Mehrwertsteuer)', 'Nettobetrag') , setDefaultValues()">
                 Mehrwertsteuer abziehen (Brutto zu Netto)<br>
 
             </article>
 
             <article class="vat-Rate">
                 <h2>Mehrwertsteuersatz</h2>
-                <input type="radio" name="vatRate" id="nineteen" checked onchange="clearInAndOut()">
+                <input type="radio" name="vatRate" id="nineteen" checked onchange="setDefaultValues()">
                 <label for="vatRate">19%</label>
-                <input type="radio" name="vatRate" id="seven" onchange="clearInAndOut()">
+                <input type="radio" name="vatRate" id="seven" onchange="setDefaultValues()">
                 <label for="vatRate">7%</label>
             </article>
 
             <article class="input-Value">
                 <label for="inputValue" id="headline">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
-                <input type="number" name="inputValue" id="inputValue" step="0.01">
+                <input type="number" name="inputValue" id="inputValue" step="0.01" min="0">
             </article>
 
             <article class="execute">
-                <button onclick="setCalcValues(document.getElementById('inputValue').value)">BERECHNEN</button>
+                <button onclick="validateInput(document.getElementById('inputValue').value)">BERECHNEN</button>
             </article>
 
             <article class="resultArea">
