@@ -13,12 +13,13 @@ input::-webkit-inner-spin-button {
 body{
     font-family: sans-serif;
     height: 100vh;
+    position: relative;
 }
-
 
 h2{
     font-size: 1rem;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
 h3{
@@ -26,13 +27,27 @@ h3{
     padding: 15px 10px;
 }
 
+label{
+    font-size: .9rem;
+}
+
+span{
+    color: red;
+}
+
+.color-blue{
+    color: rgb(9, 97,153);
+}
+
 form{
-    width: 50vh;
-    margin: 0 auto;
+    width: 42vh;
     border: 1px solid;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
 
     & .proceeding, & .vat-Rate, & .input-Value, & .vat, & .output{
         background-color: rgb(242, 244, 247);
@@ -40,21 +55,20 @@ form{
         padding: 10px;
     }
 
-    & .input-Value{
-        display: flex;
-        flex-direction: column;
-
-        input{
-            width: 90px;
-            margin-top: 5px;
-            padding: 8px;
-            border: 1px solid lightgray;
-            border-radius: 5px;
+    #inputValue{
+        width: 90px;
+        margin-top: 5px;
+        padding: 8px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
             
-            &:focus{
-                outline: none;
-            }
+        &:focus{
+            outline: none;
         }
+    }
+
+    #seven{
+        margin-left: 20px;
     }
 
     & .execute{
@@ -65,20 +79,23 @@ form{
     button{
         width: 100%;
         color:#fff;
+        border: unset;
         background-color: rgb(9, 97,153);
-        padding: 5px 30px;
+        padding: 8px 30px;
         border-radius: 5px;
-        
 
-        
-    }
-
-    .color-blue{
-        color: rgb(9, 97,153);
+        &:hover{
+            background-color: rgb(74, 118, 146);
+        }
     }
 
     .resultArea{
         margin-bottom: 10px;
+    }
+
+    #vatValue, #outputValue{
+        font-size: .9rem;
+        padding-left: 2px;
     }
 }
 
