@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+
+h2{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: .8rem;
+    padding: 15px 10px;
+}
+
+form{
+    width: 50vh;
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    & .proceeding, & .vat-Rate, & .input-Value, & .vat, & .output{
+        background-color: rgb(242, 244, 247);
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+    & .input-Value{
+        display: flex;
+        flex-direction: column;
+
+        input{
+            width: 90px;
+            margin-top: 5px;
+            padding: 8px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    & .execute{
+        padding: 5%;
+        border-bottom: 2px solid lightgray;
+    }
+
+    button{
+        width: 100%;
+        color:#fff;
+        background-color: rgb(9, 97,153);
+        padding: 5px 30px;
+        border-radius: 5px;
+        
+
+        
+    }
+
+    .color-blue{
+        color: rgb(9, 97,153);
+    }
+
+    .resultArea{
+        margin-bottom: 10px;
+    }
+}
+

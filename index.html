@@ -14,7 +14,7 @@
     <section>
         <form action="" onsubmit="return false">
 
-            <article>
+            <article class="proceeding">
                 <h2>Was soll berechnet werden?</h2>
                 <input type="radio" name="calcProceedings" id="calcBrutto" checked
                     onchange="changeHeadlines('Nettobetrag (Preis ohne Mehrwertsteuer)', 'Bruttobetrag (Endpreis)'), clearInAndOut()">
@@ -27,32 +27,37 @@
 
             </article>
 
-            <article>
+            <article class="vat-Rate">
                 <h2>Mehrwertsteuersatz</h2>
-                <label for="vatRate">19%</label>
                 <input type="radio" name="vatRate" id="nineteen" checked onchange="clearInAndOut()">
-                <label for="vatRate">7%</label>
+                <label for="vatRate">19%</label>
                 <input type="radio" name="vatRate" id="seven" onchange="clearInAndOut()">
+                <label for="vatRate">7%</label>
             </article>
 
-            <article>
+            <article class="input-Value">
                 <label for="inputValue" id="headline">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
                 <input type="number" name="inputValue" id="inputValue" step="0.01">
             </article>
 
-            <article>
-                <button onclick="setCalcValues(document.getElementById('inputValue').value)">Berechnen</button>
+            <article class="execute">
+                <button onclick="setCalcValues(document.getElementById('inputValue').value)">BERECHNEN</button>
             </article>
 
-            <article class="vat">
-                <h2>Mehrwertsteuerbetrag</h2>
-                <div id="vatValue"></div>
+            <article class="resultArea">
+                <h3 class="color-blue">Ergebnis</h3>
+                <article class="vat">
+                    <h2>Mehrwertsteuerbetrag</h2>
+                    <div id="vatValue" class="color-blue">0,00 €</div>
+                </article>
+
+                <article class="output">
+                    <h2 id="outputText">Bruttobetrag (Endpreis)</h2>
+                    <div id="outputValue" class="color-blue">0,00 €</div>
+                </article>
+
             </article>
 
-            <article class="output">
-                <h2 id="outputText">Bruttobetrag (Endpreis)</h2>
-                <div id="outputValue"></div>
-            </article>
         </form>
 
     </section>

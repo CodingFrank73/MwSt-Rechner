@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 0.8rem;
+  padding: 15px 10px;
+}
+
+form {
+  width: 50vh;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+form .proceeding, form .vat-Rate, form .input-Value, form .vat, form .output {
+  background-color: #f2f4f7;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+form .input-Value {
+  display: flex;
+  flex-direction: column;
+}
+form .input-Value input {
+  width: 90px;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+form .input-Value input:focus {
+  outline: none;
+}
+form .execute {
+  padding: 5%;
+  border-bottom: 2px solid lightgray;
+}
+form button {
+  width: 100%;
+  color: #fff;
+  background-color: #096199;
+  padding: 5px 30px;
+  border-radius: 5px;
+}
+form .color-blue {
+  color: #096199;
+}
+form .resultArea {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=main.css.map */
