@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/sass/main.css">
+</head>
+
+<body>
+
+    <section>
+        <form action="" onsubmit="return false">
+
+            <article>
+                <h2>Was soll berechnet werden?</h2>
+                <input type="radio" name="calcProceedings" id="calcBrutto" checked
+                    onchange="changeHeadlines('Nettobetrag (Preis ohne Mehrwertsteuer)', 'Bruttobetrag (Endpreis)'), clearInAndOut()">
+                Mehrwertsteuer aufschlagen (Netto zu Brutto)<br>
+
+
+                <input type="radio" name="calcProceedings" id="calcNetto"
+                    onchange="changeHeadlines('Bruttobetrag (Preis inklusive Mehrwertsteuer)', 'Nettobetrag') , clearInAndOut()">
+                Mehrwertsteuer abziehen (Brutto zu Netto)<br>
+
+            </article>
+
+            <article>
+                <h2>Mehrwertsteuersatz</h2>
+                <label for="vatRate">19%</label>
+                <input type="radio" name="vatRate" id="nineteen" checked onchange="clearInAndOut()">
+                <label for="vatRate">7%</label>
+                <input type="radio" name="vatRate" id="seven" onchange="clearInAndOut()">
+            </article>
+
+            <article>
+                <label for="inputValue" id="headline">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
+                <input type="number" name="inputValue" id="inputValue" step="0.01">
+            </article>
+
+            <article>
+                <button onclick="setCalcValues(document.getElementById('inputValue').value)">Berechnen</button>
+            </article>
+
+            <article class="vat">
+                <h2>Mehrwertsteuerbetrag</h2>
+                <div id="vatValue"></div>
+            </article>
+
+            <article class="output">
+                <h2 id="outputText">Bruttobetrag (Endpreis)</h2>
+                <div id="outputValue"></div>
+            </article>
+        </form>
+
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
