@@ -50,8 +50,3 @@ function vat(inputValue, result) {
     let x = inputValue - result;
     return (x < 0) ? x * -1 : x;
 }
-
-
-
-
-
