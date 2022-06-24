@@ -12,10 +12,14 @@
 <body>
 
     <section>
+        <div>
+            <h1>Mehrwertsteuer-Rechner</h1>
+        </div>
+
         <form action="" onsubmit="return false">
 
             <article class="proceeding">
-                <h2>Was soll berechnet werden?</h2>
+                <h4>Was soll berechnet werden?</h4>
                 <div>
                     <input type="radio" name="calcProceedings" id="calcBrutto" checked
                         onchange="changeHeadlines('Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span>', 'Bruttobetrag (Endpreis)'), setDefaultValues()">
@@ -29,7 +33,7 @@
             </article>
 
             <article class="vat-Rate">
-                <h2>Mehrwertsteuersatz</h2>
+                <h4>Mehrwertsteuersatz</h4>
                 <input type="radio" name="vatRate" id="nineteen" checked onchange="setDefaultValues()">
                 <label for="vatRate">19%</label>
                 <input type="radio" name="vatRate" id="seven" onchange="setDefaultValues()">
@@ -38,8 +42,7 @@
 
             <article class="input-Value">
                 <div>
-                    <label for="inputValue" id="headline">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span>
-                    </label>
+                    <label for="inputValue" id="headline">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
                 </div>
                 <div>
                     <input type="number" name="inputValue" id="inputValue" step="0.01" min="0">
@@ -53,17 +56,15 @@
             <article class="resultArea">
                 <h3 class="color-blue">Ergebnis</h3>
                 <article class="vat">
-                    <h2>Mehrwertsteuerbetrag</h2>
+                    <h4>Mehrwertsteuerbetrag</h4>
                     <div id="vatValue" class="color-blue">0,00 €</div>
                 </article>
 
                 <article class="output">
-                    <h2 id="outputText">Bruttobetrag (Endpreis)</h2>
+                    <h4 id="outputText">Bruttobetrag (Endpreis)</h4>
                     <div id="outputValue" class="color-blue">0,00 €</div>
                 </article>
-
             </article>
-
         </form>
 
     </section>

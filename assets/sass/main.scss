@@ -1,4 +1,9 @@
-*{
+@font-face {
+    font-family: 'WorkSans-VariableFont';
+    src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,92 +15,91 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-body{
-    font-family: sans-serif;
-    height: 100vh;
-    position: relative;
+body {
+    font-family: 'WorkSans-VariableFont';
+    width: 100%;
 }
 
-h2{
-    font-size: 1rem;
-    font-weight: 500;
+h1 {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+h4 {
     margin-bottom: 10px;
 }
 
-h3{
-    font-size: .8rem;
+h3 {
     padding: 15px 10px;
 }
 
-label{
+label {
     font-size: .9rem;
 }
 
-span{
-    color: red;
+.color-blue {
+    color: rgb(9, 97, 153);
 }
 
-.color-blue{
-    color: rgb(9, 97,153);
-}
+form {
+    width: 400px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    margin: 20px auto;
 
-form{
-    width: 30vw;
-    border: 1px solid;
-    border-radius: 5px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-
-
-    & .proceeding, & .vat-Rate, & .input-Value, & .vat, & .output{
+    & .proceeding,
+    & .vat-Rate,
+    & .input-Value,
+    & .vat,
+    & .output {
         background-color: rgb(242, 244, 247);
         margin-bottom: 5px;
         padding: 10px;
     }
 
-    #inputValue{
+    #inputValue {
         width: 90px;
         margin-top: 5px;
         padding: 8px;
         border: 1px solid lightgray;
         border-radius: 5px;
-            
-        &:focus{
+
+        &:focus {
             outline: none;
         }
     }
 
-    #seven{
+    #seven {
         margin-left: 20px;
     }
 
-    & .execute{
+    & .execute {
         padding: 5%;
-        border-bottom: 2px solid lightgray;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.6);
     }
 
-    button{
+    button {
         width: 100%;
-        color:#fff;
+        color: #fff;
         border: unset;
-        background-color: rgb(9, 97,153);
+        background-color: rgb(9, 97, 153);
         padding: 8px 30px;
         border-radius: 5px;
 
-        &:hover{
+        &:hover {
             background-color: rgb(74, 118, 146);
         }
     }
 
-    .resultArea{
+    .resultArea {
         margin-bottom: 10px;
     }
 
-    #vatValue, #outputValue{
+    #vatValue,
+    #outputValue {
         font-size: .9rem;
         padding-left: 2px;
     }
 }
-
